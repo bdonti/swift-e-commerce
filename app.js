@@ -260,7 +260,7 @@ const showTopRatedProducts = (products) => {
         src="${product.image}"
         class="rounded-xl rounded-xl w-full h-76 object-cover" />
     </figure>
-    <div class="mt-4 flex justify-between">
+    <div class="mt-4 flex justify-center gap-20">
         <p class="text-xs text-primary">${product.category}</p>
         <p><span><i class="fa-solid fa-star text-yellow-500"></i></span><span class="text-gray-500"> ${product.rating.rate}(${product.rating.count})</span></p>
     </div>
