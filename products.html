@@ -55,13 +55,24 @@
 
     <!-- our products section starts  -->
     <h2 class="text-3xl font-bold text-center my-5">Our Products</h2>
-    <div class="flex justify-center gap-6">
-        <button role="button" class="btn">All</button>
+    <div class="flex justify-center gap-6 mb-6">
+        <button onclick="showAllProduct()" role="button" class="btn">All</button>
         <button role="button" class="btn">Electronics</button>
         <button role="button" class="btn">Jewelery</button>
         <button role="button" class="btn">Men's Clothing</button>
         <button role="button" class="btn">Women's Clothing</button>
     </div>
+
+    
+    <section class="w-full md:w-7/12 mx-auto">
+        <!-- all products  -->
+        <div id="all-products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+
+        </div>
+
+    </section>
+
 
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>

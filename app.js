@@ -241,10 +241,45 @@
 //   }
 // ]
 
-const loadProducts = () => {
+const loadAllProducts = () => {
+    fetch('https://fakestoreapi.com/products')
+    .then(res=> res.json())
+    .then(data => showAllProducts(data))
+}
+
+const loadTopRatedProducts = () => {
     fetch('https://fakestoreapi.com/products')
     .then(res => res.json())
     .then(data => showTopRatedProducts(data))
+}
+
+const showAllProducts = (products) =>{
+    const allProductsContainer = document.getElementById('all-products-container');
+    products.forEach(product =>{
+        const productDiv = document.createElement('div');
+            productDiv.innerHTML = `
+        <div class="card bg-base-100 w-96 h-full shadow-sm">
+        <figure class="px-10 pt-10">
+            <img
+            src="${product.image}"
+            class="rounded-xl rounded-xl w-full h-76 object-cover" />
+        </figure>
+        <div class="mt-4 flex justify-center gap-20">
+            <p class="text-xs text-primary">${product.category}</p>
+            <p><span><i class="fa-solid fa-star text-yellow-500"></i></span><span class="text-gray-500"> ${product.rating.rate}(${product.rating.count})</span></p>
+        </div>
+        <div class="card-body text-start flex flex-col justify-between">
+            <h2 class="font-semibold">${product.title}</h2>
+            <p class="text-xl font-bold">${product.price}$</p>
+            <div class="flex justify-between items-center">
+            <div><p class="text-gray-700"><span><i class="fa-regular fa-eye"></i> </span> Details</p></div>
+            <div><button class="btn btn-primary px-8">Add to Cart</button></div>
+            </div>
+        </div>
+        </div>
+           `
+        allProductsContainer.appendChild(productDiv);
+    })
 }
 
 const showTopRatedProducts = (products) => {
@@ -278,4 +313,7 @@ const showTopRatedProducts = (products) => {
     })
 }
 
-loadProducts();
+loadAllProducts();
+if (document.getElementById('top-product-container')) {
+    loadTopRatedProducts();
+}
