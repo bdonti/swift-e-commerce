@@ -55,7 +55,7 @@
 
     <!-- our products section starts  -->
     <h2 class="text-3xl font-bold text-center my-5">Our Products</h2>
-    <div class="flex justify-center gap-6 mb-6">
+    <div class="flex flex-wrap justify-center gap-6 mb-6">
         <button onclick="loadAllProducts()" class="btn">All</button>
         <div id="categories" class="flex justify-center gap-6">
         
@@ -78,6 +78,64 @@
         </div>
     </section>
 
+     <!-- all products section ends  -->
+
+        <!-- footer section starts  -->
+    <div class="bg-[#1E293B] w-full mt-8">
+    <footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10 w-full md:w-7/12 md:mx-auto bg-[#1E293B]">
+    <aside>
+        <p class="text-sky-700 font-bold text-lg">SwiftCart</p>
+        <p class="text-[#9CA3AF] mt-4 font-semibold">
+        Your one-stop shop for all your fashion <br> and lifestyle needs. 
+        Quality products, fast <br> delivery, 
+        and excellent support.
+        </p>
+    </aside>
+    <nav class="text-white">
+        <h6 class="footer-title">QUICK LINKS</h6>
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">Products</a>
+        <a class="link link-hover">About</a>
+        <a class="link link-hover">Contact</a>
+    </nav>
+    <nav class="text-white">
+        <h6 class="footer-title">SUPPORT</h6>
+        <a class="link link-hover">FAQ</a>
+        <a class="link link-hover">Shipping</a>
+        <a class="link link-hover">Returns</a>
+        <a class="link link-hover">Privacy Policy</a>
+    </nav>
+    <nav class="text-white">
+        <h6 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h6>
+        <p class="my-3">The latest, news articles and resources, <br>sent to your inbox weekly.</p>
+        <fieldset class="w-80">
+        <div class="join">
+            <input
+            type="text"
+            placeholder="Enter Your Email"
+            class="input input-bordered join-item" />
+            <button class="btn btn-primary join-item">Subscribe</button>
+        </div>
+        </fieldset>
+    </nav>
+    </footer> 
+    <!-- <div class="hidden md:flex">
+    <hr class="border-t border-white/10 w-full md:w-7/12 mx-auto">
+    </div> -->
+    <footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10 w-full bg-[#1E293B]">
+        <div class="py-6 text-center text-gray-400 flex flex-col md:flex-row justify-between items-center w-full md:w-7/12 md:mx-auto">
+        <p>Copyright © 2026 SwiftCart. <br> All rights reserved.</p>
+        <div class="socials text-[#9CA3AF] text-xl">
+            <i class="fa-brands fa-facebook mx-2"></i>
+            <i class="fa-brands fa-twitter mx-2"></i>
+            <i class="fa-brands fa-instagram mx-2"></i>
+            <i class="fa-brands fa-linkedin mx-2"></i>
+            <i class="fa-regular fa-envelope mx-2"></i>
+        </div>
+        </div>
+    </footer>
+    </div>
+    <!-- footer section ends  -->
 
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>

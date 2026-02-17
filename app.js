@@ -294,7 +294,7 @@ const showCategoryDetails = (products) =>{
         <figure class="px-10 pt-10">
             <img
             src="${product.image}"
-            class="rounded-xl rounded-xl w-full h-76 object-cover" />
+            class="rounded-xl w-full h-76 object-cover" />
         </figure>
         <div class="mt-4 flex justify-center gap-20">
             <p class="text-xs text-primary">${product.category}</p>
@@ -325,7 +325,7 @@ const showAllProducts = (products) =>{
         <figure class="px-10 pt-10">
             <img
             src="${product.image}"
-            class="rounded-xl rounded-xl w-full h-76 object-cover" />
+            class="rounded-xl w-full h-76 object-cover" />
         </figure>
         <div class="mt-4 flex justify-center gap-20">
             <p class="text-xs text-primary">${product.category}</p>
@@ -356,7 +356,7 @@ const showTopRatedProducts = (products) => {
     <figure class="px-10 pt-10">
         <img
         src="${product.image}"
-        class="rounded-xl rounded-xl w-full h-76 object-cover" />
+        class="rounded-xl w-full h-76 object-cover" />
     </figure>
     <div class="mt-4 flex justify-center gap-20">
         <p class="text-xs text-primary">${product.category}</p>
