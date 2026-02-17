@@ -265,6 +265,32 @@ const loadAllCategoryDetails = (category) => {
     .then(data => showCategoryDetails(data))
 }
 
+const loadProductDetail = async(id) =>{
+    const res= await fetch(`https://fakestoreapi.com/products/${id}`);
+    const data = await res.json();
+    displayProductDetails(data);
+}
+
+const displayProductDetails = product =>{
+    const detailsContainer = document.getElementById('details-container');
+    detailsContainer.innerHTML = `
+    <h2 class="text-2xl font-bold">${product.title}</h2>
+    <p>${product.description}</p>
+    <div class="flex justify-center gap-24">
+     <div>
+    <p class="font-semibold text-2xl">Price</p>
+    <p>${product.price}$</p>
+    </div>
+    <div>
+    <p class="font-semibold text-2xl">Rating</p>
+    <p>${product.rating.rate}</p>
+    </div>
+    </div>
+    <div class="flex justify-center"><button class="btn btn-primary px-8 my-2">Add to Cart</button></div>
+    `;
+    document.getElementById('word_modal').showModal();
+}
+
 const showAllCategories = (categories) => {
     const allCategoriesContainer = document.getElementById('categories');
     allCategoriesContainer.innerHTML = "";
@@ -304,7 +330,7 @@ const showCategoryDetails = (products) =>{
             <h2 class="font-semibold">${product.title}</h2>
             <p class="text-xl font-bold">${product.price}$</p>
             <div class="flex justify-between items-center">
-            <div><p class="text-gray-700"><span><i class="fa-regular fa-eye"></i> </span> Details</p></div>
+            <button onclick="loadProductDetail(${product.id})" class="btn"><p class="text-gray-700"><span><i class="fa-regular fa-eye"></i> </span> Details</p></button>
             <div><button class="btn btn-primary px-8">Add to Cart</button></div>
             </div>
         </div>
@@ -335,7 +361,7 @@ const showAllProducts = (products) =>{
             <h2 class="font-semibold">${product.title}</h2>
             <p class="text-xl font-bold">${product.price}$</p>
             <div class="flex justify-between items-center">
-            <div><p class="text-gray-700"><span><i class="fa-regular fa-eye"></i> </span> Details</p></div>
+            <button onclick="loadProductDetail(${product.id})" class="btn"><p class="text-gray-700"><span><i class="fa-regular fa-eye"></i></span> Details</p></button>
             <div><button class="btn btn-primary px-8">Add to Cart</button></div>
             </div>
         </div>
